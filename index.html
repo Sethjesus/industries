@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>產業競爭力輔導團 · AI轉型專區 ｜ 六大措施</title>
-    <!-- Font Awesome 6 (免費) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* ----- 全域重置 行動優先 ----- */
         * {
             margin: 0;
             padding: 0;
@@ -40,7 +38,6 @@
             z-index: 5;
         }
 
-        /* ----- 標頭區塊 ----- */
         .mobile-header {
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(18px) saturate(180%);
@@ -104,7 +101,6 @@
             margin-left: 8px;
         }
 
-        /* ===== 導覽列改為上下兩排 ===== */
         .navbar-grid {
             display: flex;
             flex-direction: column;
@@ -159,7 +155,6 @@
             color: #0073e6;
         }
 
-        /* ----- 頁面切換 ----- */
         .page-container {
             min-height: 500px;
         }
@@ -175,7 +170,6 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* ----- 主要卡片 (gov.png 背景) ----- */
         .hero-card-mobile {
             background-image: url('https://pub-531c96b02ed745e0bbfd0e96bfde8518.r2.dev/gov.png');
             background-size: cover;
@@ -248,7 +242,6 @@
             font-size: 2.1rem;
         }
 
-        /* 三階段卡片 */
         .stage-grid-mobile {
             display: flex;
             flex-direction: column;
@@ -313,7 +306,6 @@
             width: 20px;
         }
 
-        /* 聯絡列 */
         .contact-stack {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(16px);
@@ -367,7 +359,6 @@
             color: #114e79;
         }
 
-        /* ----- 其他頁面卡片 (auto.png) ----- */
         .other-card-mobile {
             background-image: url('https://pub-531c96b02ed745e0bbfd0e96bfde8518.r2.dev/auto.png');
             background-size: cover;
@@ -417,7 +408,35 @@
             margin-top: 12px;
         }
 
-        /* 底部 */
+        /* ===== 預約諮詢按鈕 ===== */
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 20px;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #0066cc, #0044aa);
+            color: white;
+            font-size: 1.15rem;
+            font-weight: 700;
+            border-radius: 60px;
+            text-decoration: none;
+            border: none;
+            box-shadow: 0 8px 20px -8px rgba(0, 80, 180, 0.5);
+            transition: all 0.2s;
+            letter-spacing: 0.5px;
+        }
+        .cta-btn:hover, .cta-btn:active {
+            background: linear-gradient(135deg, #0077ee, #0055cc);
+            box-shadow: 0 10px 24px -8px rgba(0, 80, 200, 0.6);
+            transform: translateY(-1px);
+        }
+        .cta-btn i {
+            font-size: 1.2rem;
+        }
+
         .footer-mobile {
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(20px);
@@ -482,7 +501,6 @@
 <div class="grid-overlay"></div>
 <div class="container">
 
-    <!-- 行動版標頭 -->
     <div class="mobile-header">
         <h1>
             <span>✦</span> 產業競爭力輔導團 <span>✦</span>
@@ -493,16 +511,12 @@
         </div>
     </div>
 
-    <!-- 導覽列改為上下兩排，每排三個按鈕 -->
     <div class="navbar-grid">
-        <!-- 第一排：製造業AI、服務業AI、AI工具 -->
         <div class="nav-row">
             <button class="nav-btn active" id="nav-measure1"><i class="fas fa-industry"></i> 製造業AI</button>
             <button class="nav-btn" id="nav-measure2"><i class="fas fa-store"></i> 服務業AI</button>
             <button class="nav-btn" id="nav-measure3"><i class="fas fa-tools"></i> AI工具</button>
         </div>
-        
-        <!-- 第二排：人才培訓、淨零碳排、其他補助 -->
         <div class="nav-row">
             <button class="nav-btn" id="nav-measure4"><i class="fas fa-user-graduate"></i> 人才培訓</button>
             <button class="nav-btn" id="nav-measure5"><i class="fas fa-leaf"></i> 淨零碳排</button>
@@ -510,7 +524,6 @@
         </div>
     </div>
 
-    <!-- 頁面容器 - 六大措施完整內容 -->
     <div class="page-container">
         <!-- 頁面1 製造業AI -->
         <div class="page active-page" id="page1">
@@ -555,6 +568,10 @@
                 <div class="badge-mobile">
                     <div>不限中小企業</div><div>僑外資可</div><div>免工廠登記</div><div>無欠稅違法</div>
                 </div>
+
+                <a href="https://docs.google.com/forms/d/1lPa5YknKnI2qth_k5oy4z9jXQXYU_bIRqgJA_pXdOr4/viewform" target="_blank" class="cta-btn">
+                    <i class="fas fa-calendar-check"></i> 立即預約免費諮詢
+                </a>
             </div>
         </div>
 
@@ -568,6 +585,9 @@
                     <i class="fas fa-check-circle" style="color:#f9b84a;"></i> 整合型最高2,000萬 (自籌50%)
                 </p>
                 <div class="contact-chip"><i class="fas fa-user"></i> Eva 林小姐 (02)6620-2388 #22</div>
+                <a href="https://docs.google.com/forms/d/1lPa5YknKnI2qth_k5oy4z9jXQXYU_bIRqgJA_pXdOr4/viewform" target="_blank" class="cta-btn">
+                    <i class="fas fa-calendar-check"></i> 立即預約免費諮詢
+                </a>
             </div>
         </div>
 
@@ -583,6 +603,9 @@
                     <span style="display:block; margin-top:10px; background:rgba(255,255,255,0.6); padding:8px; border-radius:30px;">申請資格：資本額≥100萬、3案例證明、非陸資、無欠稅違約</span>
                 </p>
                 <div class="contact-chip"><i class="fas fa-user"></i> Richard 溫先生 (02)6620-2388 #23</div>
+                <a href="https://docs.google.com/forms/d/1lPa5YknKnI2qth_k5oy4z9jXQXYU_bIRqgJA_pXdOr4/viewform" target="_blank" class="cta-btn">
+                    <i class="fas fa-calendar-check"></i> 立即預約免費諮詢
+                </a>
             </div>
         </div>
 
@@ -595,6 +618,9 @@
                     <i class="fas fa-graduation-cap" style="color:#f9b84a;"></i> 商業署：青年實戰養成班、CEO班、iPAS班
                 </p>
                 <div class="contact-chip"><i class="fas fa-user"></i> Frank 高先生 (02)6620-2388 #17</div>
+                <a href="https://docs.google.com/forms/d/1lPa5YknKnI2qth_k5oy4z9jXQXYU_bIRqgJA_pXdOr4/viewform" target="_blank" class="cta-btn">
+                    <i class="fas fa-calendar-check"></i> 立即預約免費諮詢
+                </a>
             </div>
         </div>
 
@@ -608,6 +634,9 @@
                     <i class="fas fa-solar-panel" style="color:#f9b84a;"></i> 成本評估、ESCO媒合
                 </p>
                 <div class="contact-chip"><i class="fas fa-user"></i> Richard 溫先生 (02)6620-2388 #23</div>
+                <a href="https://docs.google.com/forms/d/1lPa5YknKnI2qth_k5oy4z9jXQXYU_bIRqgJA_pXdOr4/viewform" target="_blank" class="cta-btn">
+                    <i class="fas fa-calendar-check"></i> 立即預約免費諮詢
+                </a>
             </div>
         </div>
 
@@ -627,11 +656,13 @@
                     <i class="fas fa-hand-holding-heart" style="color:#f9b84a;"></i> 其他<br>
                 </p>
                 <div class="contact-chip" style="line-height:1.4;"><i class="fas fa-user"></i> Patty 吳執行長 (02)6620-2388 #22 、 0934-361-343</div>
+                <a href="https://docs.google.com/forms/d/1lPa5YknKnI2qth_k5oy4z9jXQXYU_bIRqgJA_pXdOr4/viewform" target="_blank" class="cta-btn">
+                    <i class="fas fa-calendar-check"></i> 立即預約免費諮詢
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- 底部 -->
     <div class="footer-mobile">
         <a href="https://pub-531c96b02ed745e0bbfd0e96bfde8518.r2.dev/%E6%99%AF%E7%85%AC%E8%AB%AE%E8%A9%A2%E7%AA%97%E5%8F%A3.pdf" download class="download-link">
             <i class="fas fa-file-pdf"></i> 諮詢窗口
@@ -651,65 +682,45 @@
     </div>
 </div>
 
-<!-- 頁面切換JS -->
 <script>
     (function() {
         const navBtns = document.querySelectorAll('.nav-btn');
         const pages = document.querySelectorAll('.page');
         
-        // 按鈕ID對應頁面ID
         const map = {
-            'nav-measure1': 'page1',  // 製造業AI
-            'nav-measure2': 'page2',  // 服務業AI
-            'nav-measure3': 'page3',  // AI工具
-            'nav-measure4': 'page4',  // 人才培訓
-            'nav-measure5': 'page5',  // 淨零碳排
-            'nav-measure6': 'page6'   // 其他補助
+            'nav-measure1': 'page1',
+            'nav-measure2': 'page2',
+            'nav-measure3': 'page3',
+            'nav-measure4': 'page4',
+            'nav-measure5': 'page5',
+            'nav-measure6': 'page6'
         };
 
         function setActivePage(pageId) {
-            // 隱藏所有頁面
             pages.forEach(p => p.classList.remove('active-page'));
-            
-            // 顯示選中的頁面
             const activePage = document.getElementById(pageId);
-            if (activePage) {
-                activePage.classList.add('active-page');
-            }
-            
-            // 移除所有按鈕的 active 狀態
+            if (activePage) activePage.classList.add('active-page');
             navBtns.forEach(btn => btn.classList.remove('active'));
-            
-            // 為對應的按鈕加上 active 狀態
             for (let [btnId, pid] of Object.entries(map)) {
                 if (pid === pageId) {
                     const btn = document.getElementById(btnId);
-                    if (btn) {
-                        btn.classList.add('active');
-                    }
+                    if (btn) btn.classList.add('active');
                     break;
                 }
             }
         }
 
-        // 為每個按鈕綁定點擊事件
         navBtns.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
-                const btnId = this.id;
-                
-                if (map[btnId]) {
-                    setActivePage(map[btnId]);
-                }
+                if (map[this.id]) setActivePage(map[this.id]);
             });
         });
 
-        // 初始化：顯示第一個頁面
         setActivePage('page1');
     })();
 </script>
 
-<!-- 提示訊息 -->
 <div style="margin-top:15px; font-size:0.8rem; color:#0066aa; text-align:center; background:rgba(255,255,255,0.4); padding:8px; border-radius:30px;">
     <i class="fas fa-check-circle"></i> 製造業AI · 服務業AI · AI工具 · 人才培訓 · 淨零碳排 · 其他補助
 </div>
