@@ -46,7 +46,6 @@
         --text-muted: #64748b;
         --radius: 16px;
         --shadow: 0 4px 24px rgba(0,0,0,0.08);
-        /* 底部導覽高度，讓內容不被遮住 */
         --bottom-nav-h: 0px;
     }
 
@@ -57,7 +56,6 @@
         background: #f0f4f8;
         color: var(--text);
         min-height: 100vh;
-        /* 手機時留底部 nav 空間 */
         padding-bottom: var(--bottom-nav-h);
     }
 
@@ -135,7 +133,7 @@
     }
     .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(251,191,36,0.5); }
 
-    /* ===== 桌面版 NAV TABS (原版，>600px 顯示) ===== */
+    /* ===== 桌面版 NAV TABS ===== */
     .nav-wrap {
         background: white;
         border-bottom: 1px solid var(--border);
@@ -174,7 +172,7 @@
     .nav-tab:hover { color: var(--blue); }
     .nav-tab.active { color: var(--blue); border-bottom-color: var(--blue); }
 
-    /* ===== 手機版底部 NAV GRID (<600px 顯示) ===== */
+    /* ===== 手機版底部 NAV GRID ===== */
     .bottom-nav {
         display: none;
         position: fixed;
@@ -183,7 +181,6 @@
         border-top: 1px solid var(--border);
         box-shadow: 0 -4px 20px rgba(0,0,0,0.10);
         z-index: 200;
-        /* 安全區（iPhone 底部黑條） */
         padding-bottom: env(safe-area-inset-bottom, 0px);
     }
     .bottom-nav-grid {
@@ -224,7 +221,6 @@
         transform: scale(0.94);
     }
 
-    /* 手機時切換顯示 */
     @media (max-width: 600px) {
         :root { --bottom-nav-h: 64px; }
         .nav-wrap { display: none; }
@@ -407,7 +403,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 16px;
+        gap: 12px 16px;
         font-size: 14px;
     }
     .footer-link {
@@ -419,6 +415,38 @@
         font-weight: 600;
     }
     .footer-link:hover { text-decoration: underline; }
+
+    /* ===== TiC Partner 認可徽章列 ===== */
+    .tic-bar {
+        background: white;
+        border-top: 1px solid var(--border);
+        padding: 12px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 13px;
+    }
+    .tic-label {
+        color: var(--text-muted);
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .tic-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: var(--blue-light);
+        border: 1px solid #bfdbfe;
+        border-radius: 100px;
+        padding: 4px 12px;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--blue-dark);
+        white-space: nowrap;
+    }
+    .tic-badge i { font-size: 12px; }
 
     /* ===== 桌面 RWD ===== */
     @media (min-width: 600px) {
@@ -796,6 +824,12 @@
 
 </div>
 
+<!-- TiC Partner 認可徽章列 -->
+<div class="tic-bar">
+    <span class="tic-label">國際創新創業發展協會 TiC Partner Approval 認可夥伴單位</span>
+
+</div>
+
 <!-- FOOTER -->
 <div class="footer-bar">
     <a href="https://pub-531c96b02ed745e0bbfd0e96bfde8518.r2.dev/%E6%99%AF%E7%85%AC%E8%AB%AE%E8%A9%A2%E7%AA%97%E5%8F%A3.pdf" download class="footer-link">
@@ -806,7 +840,9 @@
         <i class="fas fa-calendar-alt"></i> 農民曆
     </a>
     <span style="color:var(--border)">|</span>
-    <span style="color:var(--text-muted);font-size:13px;"><i class="fas fa-clock"></i> 115/04 教材庫</span>
+    <a href="https://www.idipckeelung.org.tw/%e7%b6%93%e6%bf%9f%e9%83%a8%e7%94%a2%e6%a5%ad%e7%ab%b6%e7%88%ad%e5%8a%9b%e8%bc%94%e5%b0%8e%e5%9c%98-%e9%ab%98%e9%81%94460%e5%84%84%e7%b6%93%e8%b2%bb%e6%94%af%e6%8c%81%e7%94%a2%e6%a5%ad%e5%a4%9a/" target="_blank" class="footer-link">
+        <i class="fas fa-book-open"></i> 基隆市政府ESG顧問政策
+    </a>
     <span style="color:var(--border)">|</span>
     <span style="color:var(--text-muted);font-size:13px;">製造業AI · 服務業AI · AI工具 · 人才培訓 · 淨零碳排 · 其他補助</span>
 </div>
@@ -830,7 +866,6 @@
         tabs.forEach(t => { if(t.dataset.page === pageId) t.classList.add('active'); });
         btns.forEach(b => { if(b.dataset.page === pageId) b.classList.add('active'); });
 
-        // 切換頁面後捲回頂部
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
